@@ -18,7 +18,6 @@ const patrick = {
   currentlyDoing: "Retraining as Fachinformatiker Anwendungsentwicklung",
   interests: ["Web Development", "Game Development", "Building cool stuff"],
   goal: "Land a fully remote dev job and build something people love",
-  funFact: "I debug better with music on 🎵"
 };
 ```
 
