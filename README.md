@@ -1,13 +1,5 @@
 <div align="center">
 
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:6EE7B7,100:3B82F6&height=200&section=header&text=Hey,%20I'm%20Patrick!&fontSize=50&fontColor=ffffff&fontAlignY=38&desc=Junior%20Developer%20%7C%20Web%20%26%20Games&descAlignY=58&descColor=ffffff" width="100%"/>
-
-</div>
-
-<br/>
-
-<div align="center">
-
   [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=6EE7B7&center=true&vCenter=true&width=600&lines=Aspiring+Software+Developer;Web+%26+Game+Enthusiast;Currently+leveling+up+my+skills+%F0%9F%9A%80)](https://git.io/typing-svg)
 
 </div>
@@ -80,9 +72,3 @@ const patrick = {
 </div>
 
 <br/>
-
-<div align="center">
-
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:3B82F6,100:6EE7B7&height=100&section=footer" width="100%"/>
-
-</div>
