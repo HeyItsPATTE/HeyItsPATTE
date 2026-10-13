@@ -15,8 +15,8 @@ I'm Patrick, and I'm retraining as a Fachinformatiker für Anwendungsentwicklung
 ## Tools I work with
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=cs,java,js,ts,html,css,vue,nuxtjs,unity,mysql,docker,git,idea&perline=13&theme=dark">
-  <img src="https://skillicons.dev/icons?i=cs,java,js,ts,html,css,vue,nuxtjs,unity,mysql,docker,git,idea&perline=13&theme=light" alt="C#, Java, JavaScript, TypeScript, HTML, CSS, Vue, Nuxt, Unity, MySQL, Docker, Git, IntelliJ IDEA">
+  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=cs%2Cjava%2Cjs%2Cts%2Chtml%2Ccss%2Cvue%2Cnuxtjs%2Cunity%2Cmysql%2Cdocker%2Cgit%2Cidea&perline=13&theme=dark">
+  <img src="https://skillicons.dev/icons?i=cs%2Cjava%2Cjs%2Cts%2Chtml%2Ccss%2Cvue%2Cnuxtjs%2Cunity%2Cmysql%2Cdocker%2Cgit%2Cidea&perline=13&theme=light" alt="C#, Java, JavaScript, TypeScript, HTML, CSS, Vue, Nuxt, Unity, MySQL, Docker, Git, IntelliJ IDEA">
 </picture>
 
 ## Get in touch
