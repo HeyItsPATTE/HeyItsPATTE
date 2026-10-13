@@ -69,9 +69,9 @@ async function fetchLive() {
     throw new Error("STATS_TOKEN is not set. Add it under Settings > Secrets and variables > Actions.");
   }
   const now = new Date();
-  const yearAgo = new Date(now);
-  yearAgo.setUTCFullYear(now.getUTCFullYear() - 1);
-  yearAgo.setUTCDate(yearAgo.getUTCDate() + 1);
+  // Same window as the contribution graph on the profile: a year back, starting on that week's Sunday.
+  const yearAgo = new Date(Date.UTC(now.getUTCFullYear() - 1, now.getUTCMonth(), now.getUTCDate()));
+  yearAgo.setUTCDate(yearAgo.getUTCDate() - yearAgo.getUTCDay());
 
   const lastYear = await gql(COLLECTION, { login: USER, from: yearAgo.toISOString(), to: now.toISOString() });
   const createdAt = new Date(lastYear.user.createdAt);
