@@ -69,9 +69,10 @@ async function fetchLive() {
     throw new Error("STATS_TOKEN is not set. Add it under Settings > Secrets and variables > Actions.");
   }
   const now = new Date();
-  // Same window as the contribution graph on the profile: a year back, starting on that week's Sunday.
-  const yearAgo = new Date(Date.UTC(now.getUTCFullYear() - 1, now.getUTCMonth(), now.getUTCDate()));
-  yearAgo.setUTCDate(yearAgo.getUTCDate() - yearAgo.getUTCDay());
+  // The API allows at most one year per query; the commit/PR/issue breakdown uses exactly that.
+  const yearAgo = new Date(now);
+  yearAgo.setUTCFullYear(now.getUTCFullYear() - 1);
+  yearAgo.setUTCDate(yearAgo.getUTCDate() + 1);
 
   const lastYear = await gql(COLLECTION, { login: USER, from: yearAgo.toISOString(), to: now.toISOString() });
   const createdAt = new Date(lastYear.user.createdAt);
@@ -109,6 +110,14 @@ function summarize(raw) {
   for (const d of lastYearDays) byDate.set(d.date, d.contributionCount);
   const all = [...byDate.entries()].sort(([a], [b]) => a.localeCompare(b));
 
+  // Headline total over the same window as the profile's contribution graph:
+  // one year back, starting on that week's Sunday (a few days more than 365).
+  const end = new Date(raw.generatedAt);
+  const start = new Date(Date.UTC(end.getUTCFullYear() - 1, end.getUTCMonth(), end.getUTCDate()));
+  start.setUTCDate(start.getUTCDate() - start.getUTCDay());
+  const startKey = start.toISOString().slice(0, 10);
+  const total = all.reduce((s, [d, n]) => (d >= startKey ? s + n : s), 0);
+
   let longest = 0, run = 0;
   for (const [, n] of all) { run = n > 0 ? run + 1 : 0; longest = Math.max(longest, run); }
 
@@ -119,7 +128,6 @@ function summarize(raw) {
   while (i >= 0 && all[i][1] > 0) { current++; i--; }
 
   // Contributions per month for the last 12 months, the current month last.
-  const end = new Date(raw.generatedAt);
   const months = [];
   for (let k = 11; k >= 0; k--) {
     const m = new Date(Date.UTC(end.getUTCFullYear(), end.getUTCMonth() - k, 1));
@@ -152,7 +160,7 @@ function summarize(raw) {
   languages = languages.map((l) => ({ ...l, pct: (100 * l.size) / listed }));
 
   return {
-    total: ly.contributionCalendar.totalContributions,
+    total,
     commits: ly.totalCommitContributions,
     prs: ly.totalPullRequestContributions,
     issues: ly.totalIssueContributions,
