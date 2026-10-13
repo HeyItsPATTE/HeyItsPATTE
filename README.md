@@ -1,5 +1,5 @@
 <picture>
-  <img src="assets/header-light.svg" width="100%" alt="Patrick Kraft. Developer in training (Fachinformatiker AE), building Undercrown in Unity, making web apps with Vue and Nuxt.">
+  <img src="assets/header-light.svg" width="100%" alt="Developer in training (Fachinformatiker AE), building Undercrown in Unity, making web apps with Vue and Nuxt.">
 </picture>
 
 I'm Patrick, and I'm retraining as a Fachinformatiker für Anwendungsentwicklung (IHK) in Germany. Before that I spent two and a half years in pharmaceutical production, mostly in a GMP cleanroom, where every step is done exactly to spec and written down. I've brought that habit to code. Most days I'm working on a game in Unity or on something for the web.
