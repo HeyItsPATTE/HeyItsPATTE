@@ -31,7 +31,7 @@ jobs:
         env:
           STATS_TOKEN: ${{ secrets.STATS_TOKEN }}
           STATS_USER: ${{ github.repository_owner }}
-          EXCLUDE_LANGS: ShaderLab,HLSL
+          EXCLUDE_LANGS: ShaderLab,HLSL,Wolfram Language
         run: node .github/stats/build.mjs
 
       - name: Commit if changed

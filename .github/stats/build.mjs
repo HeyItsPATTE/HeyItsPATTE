@@ -143,10 +143,13 @@ function summarize(raw) {
   }
   const sorted = [...langs.values()].sort((a, b) => b.size - a.size);
   const totalSize = sorted.reduce((s, l) => s + l.size, 0) || 1;
-  let languages = sorted.slice(0, 6);
-  const rest = sorted.slice(6).reduce((s, l) => s + l.size, 0);
-  if (rest > 0) languages.push({ name: "Other", color: "#8b949e", size: rest });
-  languages = languages.map((l) => ({ ...l, pct: (100 * l.size) / totalSize }));
+  // Up to six languages with at least 1 % get their own entry; everything else becomes "Other".
+  const shown = sorted.filter((l) => l.size / totalSize >= 0.01).slice(0, 6);
+  const rest = totalSize - shown.reduce((s, l) => s + l.size, 0);
+  let languages = [...shown];
+  if (rest / totalSize >= 0.005) languages.push({ name: "Other", color: "#8b949e", size: rest });
+  const listed = languages.reduce((s, l) => s + l.size, 0) || 1;
+  languages = languages.map((l) => ({ ...l, pct: (100 * l.size) / listed }));
 
   return {
     total: ly.contributionCalendar.totalContributions,

@@ -6,10 +6,17 @@ I'm Patrick, and I'm retraining as a Fachinformatiker für Anwendungsentwicklung
 
 ## Projects
 
-**Undercrown** is a low-poly medieval survival game in Unity and C#, built for multiplayer from day one. It's my main project right now and lives in a private repo, which is why my repository list looks quieter than I am.
+**Undercrown** is a low-poly medieval survival game in Unity and C#, built for multiplayer from day one. It's my main project right now and lives in a private repo, so the activity below counts private repositories too.
 
 - **[Survive Tonight](https://berrybit.itch.io/survive-tonight)**: a short 2D horror prototype I made with a friend as BerryBit Studios for Scream Jam 2025. Playable on itch.io for Windows, macOS and Linux.
 - **[Portfolio](https://github.com/HeyItsPATTE/portfolio-source)**: the source of my personal site, built with Nuxt 4, Vue 3, TypeScript and SCSS.
+
+## Activity
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
+  <img src="assets/stats-light.svg" width="100%" alt="My GitHub activity over the last 12 months, including private repositories: contributions, streaks, contributions per month and languages.">
+</picture>
 
 ## Tools I work with
 
