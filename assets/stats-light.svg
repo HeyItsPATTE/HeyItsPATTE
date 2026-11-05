@@ -36,7 +36,7 @@
 <text class="tiny" x="668.0" y="250" text-anchor="middle">Oct</text>
 <rect x="704.0" y="227.0" width="56.0" height="3.0" rx="2" fill="#D70A24"><title>Nov: 2</title></rect>
 <text class="tiny" x="732.0" y="250" text-anchor="middle">Nov</text>
-<text class="stat" x="0" y="296">1,170 commits</text>
+<text class="stat" x="0" y="296">1,169 commits</text>
 <text class="stat" x="147" y="296">205 pull requests</text>
 <text class="stat" x="330" y="296">125 issues</text>
 <text class="stat" x="450" y="296">17 reviews</text>
@@ -50,5 +50,5 @@
 <circle cx="103.4" cy="349.5" r="5" fill="#41b883"/><text class="small" x="114.4" y="354">Vue 2.1%</text>
 <circle cx="201.8" cy="349.5" r="5" fill="#3178c6"/><text class="small" x="212.8" y="354">TypeScript 1.8%</text>
 <circle cx="354.8" cy="349.5" r="5" fill="#8b949e"/><text class="small" x="365.8" y="354">Other 1.1%</text>
-<text class="tiny" x="0" y="384">Updated 4 Nov 2026. Includes private repositories.</text>
+<text class="tiny" x="0" y="384">Updated 5 Nov 2026. Includes private repositories.</text>
 </svg>
